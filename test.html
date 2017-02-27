@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <!-- Test Dependencies -->
+  <link href="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.css" rel="stylesheet" />
+  <script src="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.min.js"></script>
+  <script>
+    mocha.ui('bdd');
+    mocha.reporter('html');
+    var expect = chai.expect;
+  </script>
+  <script src="spec/test.js"></script>
+  <script>
+    window.addEventListener('load', function() {
+      mocha.run();
+    });
+
+    $(document).ready(function(){
+      $('body').prepend($('<button>').text('mocha').click(() => $('#mocha').toggle() ));
+    });
+  </script>
+
+  <!-- Production Dependencies -->
+  <!-- <script src="./jquery-3.1.1.min.js" charset="utf-8"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
+
+  <!-- Your Calculator JS -->
+  <style media="screen">
+    @font-face {
+      font-family: 'TickingTimebombBB';
+      src: url('./font/TickingTimebombBB.ttf') format('truetype');
+    }
+  </style>
+
+  <script src="./public/calc.js" charset="utf-8"></script>
+  <script src="./public/run.js" charset="utf-8"></script>
+
+</head>
+<body>
+
+  <!-- *********** Your Solution Here *********** -->
+
+
+  <!-- ****************************************** -->
+
+  <div id="mocha"></div>
+</body>
+</html>
